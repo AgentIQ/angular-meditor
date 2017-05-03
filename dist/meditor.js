@@ -760,7 +760,7 @@ angular.module('angular-meditor', ['colorpicker.module'])
         };
 
         // watch the font size selector
-        scope.$watch('size', function () {
+        /*scope.$watch('size', function () {
           document.execCommand('styleWithCSS', false, false);
           document.execCommand('fontSize', false, scope.size);
           // custom event for two-way binding
@@ -768,7 +768,7 @@ angular.module('angular-meditor', ['colorpicker.module'])
         });
 
         // watch the font family selector
-        scope.$watch('family', function () {
+        /*scope.$watch('family', function () {
           // dynamically load the family from google fonts
           if (window.WebFont) {
             WebFont.load({
@@ -783,7 +783,7 @@ angular.module('angular-meditor', ['colorpicker.module'])
 
           // custom event for two-way binding
           scope.$broadcast('meditor-change');
-        });
+        });*/
 
         // load google webfont library
         // to be able to dynamically load fonts
