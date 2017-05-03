@@ -563,6 +563,22 @@ angular.module('angular-meditor', ['colorpicker.module'])
           {
             label: 'Old Standard TT',
             value: 'Old Standard TT, serif'
+          },
+          {
+            label: 'Baloo',
+            value: 'Baloo, normal'
+          },
+          {
+            label: 'Love Ya Like A Sister',
+            value: 'Love Ya Like A Sister, normal'
+          },
+          {
+            label: 'Raleway',
+            value: 'Raleway, normal'
+          },
+          {
+            label: 'Inknut Antiqua',
+            value: 'Inknut Antiqua, normal'
           }
         ];
         scope.family = scope.familyOptions[0];
@@ -745,7 +761,7 @@ angular.module('angular-meditor', ['colorpicker.module'])
              if (window.WebFont) {
                 WebFont.load({
                   google: {
-                    families: [scope.family.label]
+                    families: [tag.label]
                   }
                 });
               }
