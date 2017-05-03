@@ -753,12 +753,13 @@ angular.module('angular-meditor', ['colorpicker.module'])
           }
           if (!tag) tag = null;
           setTimeout( function () {
-          document.execCommand('styleWithCSS', false, false);
-          document.execCommand(action, false, tag);
+            document.execCommand('styleWithCSS', false, false);
+            document.execCommand(action, false, tag);
+            scope.$broadcast('meditor-change');
           }, 0);
 
           // custom event for two-way binding
-          scope.$broadcast('meditor-change');
+          
         };
 
         // watch the font size selector
