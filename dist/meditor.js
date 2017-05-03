@@ -750,18 +750,14 @@ angular.module('angular-meditor', ['colorpicker.module'])
                 });
               }
               tag = tag.value;
-              setTimeout( function () {
             document.execCommand('styleWithCSS', false, true);
             document.execCommand(action, false, tag);
             scope.$broadcast('meditor-change');
-          }, 0);
           } else {
           if (!tag) tag = null;
-          setTimeout( function () {
             document.execCommand('styleWithCSS', false, false);
             document.execCommand(action, false, tag);
             scope.$broadcast('meditor-change');
-          }, 0);
           }
 
           // custom event for two-way binding
