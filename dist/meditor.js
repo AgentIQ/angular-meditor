@@ -752,8 +752,10 @@ angular.module('angular-meditor', ['colorpicker.module'])
               tag = tag.value;
           }
           if (!tag) tag = null;
+          setTimeout( function () {
           document.execCommand('styleWithCSS', false, false);
           document.execCommand(action, false, tag);
+          }, 0);
 
           // custom event for two-way binding
           scope.$broadcast('meditor-change');
@@ -768,7 +770,7 @@ angular.module('angular-meditor', ['colorpicker.module'])
         });
 
         // watch the font family selector
-        /*scope.$watch('family', function () {
+        scope.$watch('family', function () {
           // dynamically load the family from google fonts
           if (window.WebFont) {
             WebFont.load({
